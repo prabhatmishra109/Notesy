@@ -1,0 +1,19 @@
+
+# Frontend
+node_modules/
+dist/
+
+# Java build files
+**/target/
+
+# Uploaded user files
+**/uploads/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# IDE files
+.idea/
+.vscode/
