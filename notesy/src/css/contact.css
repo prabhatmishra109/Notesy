@@ -1,0 +1,167 @@
+/* ===== MAIN BACKGROUND ===== */
+.main-container {
+  min-height: 100vh;
+  background: #F4EEFF; /* light lavender */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 50px;
+}
+
+/* ===== CARD ===== */
+.card-container {
+  display: flex;
+  width: 1000px;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== LEFT SIDE ===== */
+.left-side {
+  flex: 1;
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+/* TEXT OVER IMAGE (NO DARK OVERLAY) */
+.left-side h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.left-side p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== RIGHT SIDE ===== */
+.right-side {
+  flex: 1;
+  padding: 45px;
+  background: #FFFFFF;
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #424874;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* ICON */
+.input-group .icon {
+  position: relative;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #A6B1E1;
+  font-size: 14px;
+}
+
+/* Inputs */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border-radius: 25px;
+  border: 1px solid #DCD6F7;
+  outline: none;
+  background: #F9F9FF;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Placeholder */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #aaa;
+}
+
+/* Focus Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #A6B1E1;
+  box-shadow: 0 0 8px rgba(166,177,225,0.4);
+  background: #fff;
+}
+
+/* Validation */
+.invalid-feedback {
+  font-size: 13px;
+  color: red;
+  margin-left: 10px;
+}
+
+/* ===== BUTTON ===== */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #A6B1E1, #424874);
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(66,72,116,0.4);
+}
+
+/* ===== MAP ===== */
+.container iframe {
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 220px;
+  }
+
+  .right-side {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-title {
+    font-size: 22px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 13px;
+  }
+}

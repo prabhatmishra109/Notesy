@@ -1,0 +1,242 @@
+/* =========================
+   ROOT (UPDATED PALETTE)
+========================= */
+.admin-layout {
+  --bg-main: #F9F7F7;
+  --bg-soft: #DBE2EF;
+  --primary: #3F72AF;
+  --dark: #112D4E;
+  --white: #ffffff;
+}
+
+/* =========================
+   NAVBAR (GLASS + PRO)
+========================= */
+.admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(249, 247, 247, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 1000;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+
+/* MENU BUTTON */
+.menu-toggle {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 7px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-toggle:hover {
+  background: var(--dark);
+  transform: scale(1.08);
+}
+
+/* RIGHT PROFILE */
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
+  font-weight: 500;
+  background: var(--bg-soft);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.admin-profile i {
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+/* =========================
+   SIDEBAR (PREMIUM)
+========================= */
+.admin-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: linear-gradient(180deg, #112D4E, #3F72AF);
+  padding-top: 20px;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+/* COLLAPSE */
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+/* MOBILE */
+.admin-sidebar.show {
+  left: 0;
+}
+
+/* LIST */
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ITEM */
+.admin-sidebar ul li {
+  margin: 8px 0;
+}
+
+/* LINKS */
+.admin-sidebar ul li a,
+.admin-sidebar ul li button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #f1f1f1;
+  padding: 12px 22px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+  border-radius: 0 25px 25px 0;
+  position: relative;
+}
+
+/* ICON */
+.admin-sidebar i {
+  font-size: 1.2rem;
+  min-width: 22px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* TEXT */
+.admin-sidebar span {
+  transition: 0.3s;
+}
+
+/* COLLAPSED TEXT */
+.admin-sidebar.collapsed span {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* HOVER EFFECT */
+.admin-sidebar ul li a:hover,
+.admin-sidebar ul li button:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(6px);
+}
+
+/* ICON ANIMATION */
+.admin-sidebar ul li a:hover i {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* ACTIVE */
+.admin-sidebar ul li a.active {
+  background: rgba(255,255,255,0.25);
+  font-weight: 600;
+}
+
+/* LEFT GLOW BAR */
+.admin-sidebar ul li a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* LOGOUT */
+.admin-sidebar .logout button {
+  color: #ffcccc;
+}
+
+.admin-sidebar .logout button:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* =========================
+   CONTENT SHIFT
+========================= */
+.admin-content {
+  margin-left: 240px;
+  padding: 80px 25px;
+  transition: 0.3s;
+}
+
+.admin-sidebar.collapsed ~ .admin-content {
+  margin-left: 70px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+    left: -240px;
+  }
+
+  .admin-sidebar.show {
+    left: 0;
+  }
+
+  .admin-content {
+    margin-left: 0;
+  }
+
+  .admin-navbar {
+    padding: 0 15px;
+  }
+}
+
+/* =========================
+   EXTRA SMOOTHNESS
+========================= */
+.admin-sidebar ul li a,
+.admin-sidebar ul li button {
+  transition: all 0.25s ease;
+}
+
+/* SCROLLBAR */
+.admin-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+}

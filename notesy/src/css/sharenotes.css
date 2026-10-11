@@ -1,0 +1,118 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e9e1f8, #e6dbff);
+}
+
+/* MAIN CONTAINER */
+.share-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* CARD */
+.share-card {
+  width: 100%;
+  
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.share-card:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADING */
+.share-card h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #3f3d56;
+  font-weight: 600;
+}
+
+/* INPUT FIELDS */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color: #faf9ff;
+}
+
+.form-control:focus {
+  border-color: #7b61ff;
+  box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.1);
+}
+
+/* FILE INPUT */
+input[type="file"] {
+  background-color: #faf9ff;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7b61ff, #5a3fff);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a3fff, #3f2bc7);
+  transform: scale(1.02);
+}
+
+/* SPACING */
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .share-card {
+    padding: 25px 20px;
+  }
+
+  .share-card h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .share-container {
+    padding: 20px 10px;
+  }
+
+  .share-card {
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  .form-control {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

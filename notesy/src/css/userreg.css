@@ -1,0 +1,131 @@
+/* ===== MAIN BACKGROUND ===== */
+.register-main {
+  min-height: 100vh;
+  background: #DBE2EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 50px;
+}
+
+/* ===== WRAPPER ===== */
+.register-wrapper {
+  display: flex;
+  width: 950px;
+  max-width: 100%;
+  background: #F9F7F7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+/* ===== LEFT SIDE ===== */
+.register-left {
+  flex: 1;
+  background: linear-gradient(135deg, #3F72AF, #112D4E);
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-left h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.register-left p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.register-left img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+/* ===== RIGHT SIDE ===== */
+.register-right {
+  flex: 1;
+  padding: 40px;
+}
+
+.register-right h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #112D4E;
+  font-weight: bold;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3F72AF;
+  box-shadow: 0 0 8px rgba(63,114,175,0.3);
+}
+
+/* Validation */
+.invalid-feedback {
+  font-size: 12px;
+  color: red;
+  margin-left: 10px;
+}
+
+/* ===== BUTTON ===== */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #3F72AF;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+.register-btn:hover {
+  background: #112D4E;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(63,114,175,0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .register-wrapper {
+    flex-direction: column;
+  }
+
+  .register-left {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .register-left img {
+    margin-top: 15px;
+  }
+
+  .register-right {
+    padding: 25px;
+  }
+}

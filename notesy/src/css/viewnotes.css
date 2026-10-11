@@ -1,0 +1,107 @@
+/* Background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+th {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+}
+
+/* Rows */
+td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+/* Hover */
+tr:hover {
+  background: #f1f7ff;
+  transition: 0.3s;
+}
+
+/* File Box */
+.file-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* File Name */
+.file-name {
+  font-size: 14px;
+  color: #333;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Download Icon Button */
+.file-box a {
+  text-decoration: none;
+  background: #4facfe;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.file-box a:hover {
+  background: #00c6ff;
+}
+
+/* Empty State */
+.empty-box {
+  margin-top: 60px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.empty-box img {
+  width: 100px;
+}
+
+.empty-box h3 {
+  margin-top: 15px;
+}
+
+.empty-box p {
+  color: #777;
+}

@@ -1,0 +1,206 @@
+/* =========================
+   COLOR SYSTEM (SCOPED)
+========================= */
+.admin-login-page {
+  --bg-main: #F4EEFF;
+  --bg-card: #DCD6F7;
+  --primary: #A6B1E1;
+  --dark: #424874;
+  --white: #ffffff;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.login-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F4EEFF, #DCD6F7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.login-card {
+  display: flex;
+  width: 900px;
+  max-width: 100%;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary), var(--dark));
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.left-panel img {
+  width: 120px;
+  margin-top: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+.right-panel {
+  flex: 1;
+  padding: 40px 30px;
+}
+
+.right-panel h2 {
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 5px;
+  color: #777;
+  font-size: 0.85rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* FLOAT LABEL */
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -8px;
+  font-size: 0.7rem;
+  color: var(--primary);
+}
+
+/* INPUT FOCUS */
+.input-box input:focus {
+  border-color: var(--primary);
+}
+
+/* =========================
+   PASSWORD ICON
+========================= */
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--dark);
+}
+
+/* =========================
+   OPTIONS
+========================= */
+.options {
+  display: flex;
+  align-items: center;   /* vertical alignment correct */
+  gap: 10px;             /* checkbox aur text ke beech space */
+  font-size: 0.9rem;
+}
+.options input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.options input {
+  margin-right: 6px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    padding: 30px 15px;
+  }
+
+  .right-panel {
+    padding: 25px 20px;
+  }
+
+  .left-panel img {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 80px 10px;
+  }
+
+  .right-panel h2 {
+    font-size: 1.5rem;
+  }
+}

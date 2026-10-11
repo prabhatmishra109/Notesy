@@ -1,0 +1,120 @@
+/* Top Branding Bar */
+.top-bar {
+  background: linear-gradient(90deg, #293e6e, #33496c);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Navbar */
+.premium-navbar {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.brand-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8 !important;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.brand-logo:hover {
+  color: #0ea5e9 !important;
+  transform: scale(1.05);
+}
+
+/* Nav Links */
+.nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover Animation */
+.nav-animate::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #38bdf8;
+  transition: 0.3s ease;
+}
+
+.nav-animate:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #38bdf8 !important;
+  transform: translateY(-2px);
+}
+
+/* Active link */
+.nav-link.active {
+  color: #38bdf8 !important;
+}
+
+/* Mobile toggle button */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Sticky effect enhancement */
+.sticky-top {
+  z-index: 999;
+}
+
+/* Smooth dropdown animation (future use) */
+.collapse.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-link {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* ===== Login Button Special Styling ===== */
+.navbar-nav .nav-item:last-child .nav-link {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+  margin-left: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-nav .nav-item:last-child .nav-link:hover {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+}
+
+/* Remove underline animation from button */
+.navbar-nav .nav-item:last-child .nav-link::after {
+  display: none;
+}

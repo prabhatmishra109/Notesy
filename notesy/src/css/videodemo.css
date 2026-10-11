@@ -1,0 +1,126 @@
+/* ===== PAGE BACKGROUND ===== */
+.video-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== HEADER ===== */
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.video-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Close Button */
+.video-header button {
+  background: rgba(255, 0, 0, 0.8);
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-header button:hover {
+  background: red;
+  transform: scale(1.05);
+}
+
+/* ===== VIDEO CONTAINER ===== */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Player */
+.video-player {
+  width: 75%;
+  border-radius: 16px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  /* Glow shadow */
+  box-shadow:
+    0 0 30px rgba(37, 99, 235, 0.4),
+    0 0 60px rgba(37, 99, 235, 0.2);
+
+  transition: 0.4s;
+}
+
+.video-player:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 0 40px rgba(59, 130, 246, 0.6),
+    0 0 80px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Speed label */
+.controls span {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #cbd5f5;
+}
+
+/* Buttons */
+.controls button {
+  margin: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  backdrop-filter: blur(6px);
+}
+
+/* Hover effect */
+.controls button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.7);
+}
+
+/* Active speed button (optional) */
+.controls button.active {
+  background: #2563eb;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .video-player {
+    width: 95%;
+  }
+
+  .video-header h2 {
+    font-size: 20px;
+  }
+
+  .controls button {
+    padding: 6px 10px;
+  }
+}

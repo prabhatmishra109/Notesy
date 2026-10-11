@@ -1,0 +1,86 @@
+/* ===== PAGE WRAPPER ===== */
+.fetchfb-wrapper {
+  padding: 30px;
+  background: linear-gradient(135deg, #eef2f7, #f8fbff);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== NOTESY INTRO ===== */
+.fetchfb-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fetchfb-intro h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.fetchfb-intro p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* ===== CARD ===== */
+.fetchfb-card {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.fetchfb-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== ROW ===== */
+.fetchfb-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* ===== AVATAR ===== */
+.fetchfb-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CONTENT ===== */
+.fetchfb-content {
+  flex: 1;
+}
+
+/* ===== NAME + REVIEW ===== */
+.fetchfb-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.fetchfb-name {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 6px;
+}
+
+/* ===== RATING ===== */
+.fetchfb-stars {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #f1c40f;
+}

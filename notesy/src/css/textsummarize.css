@@ -1,0 +1,145 @@
+/* Page */
+.summarize-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dbe2ef, #f9f7f7);
+  padding: 40px 80px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Title */
+.summarize-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #112d4e;
+  margin-bottom: 30px;
+}
+
+/* Layout */
+.summarize-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 30px;
+}
+
+/* Left Section */
+.input-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-section h4 {
+  margin-bottom: 10px;
+  color: #112d4e;
+}
+
+/* Textarea */
+.summarize-textarea {
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #dbe2ef;
+  padding: 12px;
+  font-size: 15px;
+  background: #f9f7f7;
+  resize: none;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.summarize-textarea:focus {
+  outline: none;
+  border-color: #3f72af;
+  box-shadow: 0 0 6px rgba(63,114,175,0.3);
+}
+
+/* Button */
+.summarize-btn {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3f72af, #112d4e);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.summarize-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(17,45,78,0.3);
+}
+
+/* Right Section */
+.output-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.output-section h4 {
+  margin-bottom: 10px;
+  color: #112d4e;
+}
+
+/* Summary */
+.summary-box {
+  flex: 1;
+  overflow-y: auto;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+/* Buttons */
+.summary-actions button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  /* background: #3f72af; */
+  color: white;
+  transition: 0.3s;
+}
+
+.summary-actions button:hover {
+  background: #112d4e;
+}
+
+/* Scroll */
+.summary-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.summary-box::-webkit-scrollbar-thumb {
+  background: #3f72af;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .summarize-page {
+    padding: 20px;
+  }
+
+  .summarize-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mindmap-container {
+  height: 650px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f8fafc;
+  overflow: hidden;
+}

@@ -1,0 +1,149 @@
+/* ===== TOP BAR ===== */
+.ultra-topbar {
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: 570;
+  color: #1f1d1d;
+  background: linear-gradient(90deg, #dbe2ef, #76a5de);
+  letter-spacing: 0.5px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+/* ===== NAVBAR ===== */
+.ultra-navbar {
+  top: 30px;
+  padding: 15px 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px);
+  background: #112D4E;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Scroll Effect */
+.ultra-scroll {
+  background: #112D4E !important;
+  padding: 10px 0;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* ===== LOGO ===== */
+.ultra-brand {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #11d9e3, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+.ultra-brand:hover {
+  transform: scale(1.08);
+}
+
+/* ===== NAV LINKS ===== */
+.ultra-link {
+  color: #fefdfd !important;
+  font-size: 16px;
+  margin: 0 12px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover Glow Effect */
+.ultra-link:hover {
+  color: #22eaf5be !important;
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+/* Underline Animation */
+.ultra-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.ultra-link:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK (IMPORTANT 🔥) */
+.ultra-link.active {
+  color: #00f2fe !important;
+}
+
+.ultra-link.active::after {
+  width: 100%;
+}
+
+/* ===== BUTTONS ===== */
+.ultra-register {
+  background: linear-gradient(135deg, #3f72af, #4facfe);
+  color: #fff !important;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Glow hover */
+.ultra-register:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #3f72af;
+}
+
+/* Login Button */
+.ultra-login {
+  border: 1px solid #5adfe6;
+  color: #3f72af !important;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.ultra-login:hover {
+  background: #76e4ea;
+  color: #112D4E !important;
+  box-shadow: 0 0 15px rgba(0,242,254,0.6);
+  transform: translateY(-3px);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 991px) {
+  .ultra-navbar {
+    background: rgba(0,0,0,0.95);
+  }
+
+  .ultra-link {
+    margin: 10px 0;
+  }
+
+  .ultra-topbar {
+    font-size: 12px;
+  }
+}
+.icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+/* alignment fix */
+.ultra-link,
+.ultra-register,
+.ultra-login,
+.ultra-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

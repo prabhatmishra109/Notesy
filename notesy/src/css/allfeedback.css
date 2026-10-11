@@ -1,0 +1,17 @@
+.feedback-page {
+    margin-left: 220px;
+    padding: 90px 30px;
+    background-color: #f9fbfd;
+    min-height: 100vh;
+}
+/* Header */
+.feedback-header h2 {
+    font-size: 20px;
+    color: #3265dd;
+    margin-bottom: 5px;
+}
+
+.feedback-header p {
+    font-size: 13px;
+    color: #7798c6;
+}

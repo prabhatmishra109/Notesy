@@ -1,0 +1,128 @@
+/* =========================
+   ROOT (SCOPED SAFE)
+========================= */
+.feedback-list {
+  --bg-main: #F9F7F7;
+  --bg-soft: #DBE2EF;
+  --primary: #3F72AF;
+  --dark: #112D4E;
+  --white: #ffffff;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.feedback-item {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER */
+.feedback-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* TOP BORDER GLOW */
+.feedback-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #3F72AF, #112D4E);
+}
+
+/* =========================
+   TEXT
+========================= */
+.feedback-item p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.feedback-item strong {
+  color: var(--dark);
+}
+
+/* =========================
+   RATING (STARS)
+========================= */
+.feedback-item p:nth-child(2) {
+  color: #f4b400;
+  font-weight: 500;
+}
+
+/* =========================
+   REVIEW TEXT
+========================= */
+.feedback-item p:nth-child(3) {
+  background: var(--bg-soft);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.feedback-item button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff4d4d, #cc0000);
+  color: white;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.feedback-item button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.no-feedback {
+  text-align: center;
+  padding: 40px;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .feedback-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .feedback-item {
+    padding: 15px;
+  }
+
+  .feedback-item p {
+    font-size: 0.85rem;
+  }
+}

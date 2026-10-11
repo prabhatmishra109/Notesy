@@ -1,0 +1,19 @@
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+.main-div{
+display: flex;
+flex-direction: column;
+flex:1;
+min-height: 100vh;
+background-color: #DBE2EF;
+color: rgb(30, 28, 28);
+
+
+}
+

@@ -1,0 +1,141 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #112d4e, #3f72af) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* MENU BUTTON */
+.navbar button {
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  transform: scale(1.1);
+}
+
+/* SIDEBAR */
+.user-sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(180deg, #112d4e, #1b3c6b);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: right 0.4s ease-in-out;
+  padding-top: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* USER PROFILE */
+.user-sidebar .fa-user-circle {
+  color: #dbe2ef;
+}
+
+.user-sidebar h6 {
+  color: #f9f7f7;
+  font-weight: 500;
+}
+
+/* MENU ITEMS */
+.menu-item {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #dbe2ef !important;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+  transform: translateX(5px);
+}
+
+/* ICONS */
+.menu-item i {
+  color: #dbe2ef;
+}
+
+/* LOGOUT SPECIAL */
+.menu-item:last-child {
+  margin-top: 10px;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.menu-item:last-child:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* OVERLAY (optional enhancement if you move to CSS class later) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 45, 78, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+}
+
+/* SCROLLBAR (PRO LOOK) */
+.user-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.user-sidebar::-webkit-scrollbar-thumb {
+  background: #3f72af;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    height: 55px !important;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .user-sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .user-sidebar {
+    width: 200px;
+    padding-top: 70px;
+  }
+
+  .menu-item {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
